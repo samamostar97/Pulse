@@ -1,0 +1,74 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.nupkg
+*.snupkg
+project.lock.json
+**/Properties/launchSettings.json
+
+## NuGet
+**/packages/
+*.nuget.props
+*.nuget.targets
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## IDE
+.idea/
+*.swp
+*.swo
+*~
+
+## Secrets and config
+appsettings.Development.json
+appsettings.Local.json
+*.pfx
+*.key
+
+## Claude / AI tooling
+CLAUDE.md
+.claude/
+.claudeignore
+.mcp.json
+
+## Flutter
+pulse_app/.dart_tool/
+pulse_app/.packages
+pulse_app/build/
+pulse_app/.flutter-plugins
+pulse_app/.flutter-plugins-dependencies
+
+## Misc
+*.log
+*.tmp
+*.bak
+*.swp
