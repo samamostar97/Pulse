@@ -1,10 +1,13 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Pulse.Application.Common.Interfaces;
+using Pulse.Domain.Entities;
+using Pulse.Infrastructure.Identity;
 using Pulse.Infrastructure.Persistence;
 
 namespace Pulse.Infrastructure;
@@ -59,6 +62,11 @@ public static class DependencyInjection
         });
 
         services.AddAuthorizationBuilder();
+
+        services.AddHttpContextAccessor();
+        services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+        services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<ICurrentUserService, CurrentUserService>();
 
         services.AddSignalR();
 
